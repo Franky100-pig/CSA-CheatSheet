@@ -1,0 +1,1023 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 612. 792.]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 9212
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.471 g
+40. 767. Td
+(AP Computer Science A — Key Concepts Checklist) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.471 g
+392. 767. Td
+(github.com/Franky100-pig/CSA-CheatSheet) Tj
+ET
+0.86 G
+40. 762. m
+572. 762. l
+S
+0.12 0.16 0.23 rg
+45. 742. m
+567. 742. l
+569.7614237491540052 742. 572. 739.7614237491540052 572. 737. c
+572. 693. l
+572. 690.2385762508459948 569.2385762508459948 688. 567. 688. c
+45. 688. l
+42.2385762508460303 688. 40. 690.7614237491540052 40. 693. c
+40. 737. l
+40. 739.7614237491540052 42.7614237491539697 742. 45. 742. c
+h
+f
+BT
+/F2 18 Tf
+20.6999999999999993 TL
+1. g
+55. 718. Td
+(AP CSA: Key Concepts Checklist) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.796 0.835 0.882 rg
+55. 700. Td
+(High-Yield Exam Topics · Static vs. Non-Static #01 Top Priority · Code & Traps) Tj
+ET
+0.95 0.96 0.98 rg
+43. 672. m
+569. 672. l
+570.6568542494924259 672. 572. 670.6568542494924259 572. 669. c
+572. 655. l
+572. 653.3431457505075741 570.3431457505075741 652. 569. 652. c
+43. 652. l
+41.3431457505076168 652. 40. 653.6568542494924259 40. 655. c
+40. 669. l
+40. 670.6568542494924259 41.6568542494923832 672. 43. 672. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 658. Td
+([  ] 01. Static vs. Non-Static \(Class vs. Instance\) — TOP PRIORITY) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 644. Td
+(static belongs to the Class as a whole with ONE shared copy in memory. Non-static belongs to an individual object created with) Tj
+T* (new.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 618. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 618. Td
+(static methods/fields are called via ClassName.method\(\) or ClassName.field) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 605. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 605. Td
+(Non-static methods/fields are called via objectName.method\(\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 592. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 592. Td
+(static methods CANNOT use "this" or access instance fields directly) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 579. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 579. Td
+(Calling an instance method from static main without creating an object causes "non-static method cannot be referenced from a) Tj
+T* (static context") Tj
+ET
+0.06 0.09 0.16 rg
+48. 555. m
+564. 555. l
+565.6568542494924259 555. 567. 553.6568542494924259 567. 552. c
+567. 518. l
+567. 516.3431457505075741 565.3431457505075741 515. 564. 515. c
+48. 515. l
+46.3431457505076168 515. 45. 516.6568542494924259 45. 518. c
+45. 552. l
+45. 553.6568542494924259 46.6568542494923832 555. 48. 555. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 543. Td
+(public class Student {) Tj
+T* (  private String name;           // Instance var \(unique per student\)) Tj
+T* (  private static int count = 0;  // Static var \(shared across all students\)) Tj
+T* (  public Student\(String n\) { name = n; count++; }) Tj
+T* (  public static int getCount\(\) { return count; }) Tj
+T* (}) Tj
+ET
+0.95 0.96 0.98 rg
+43. 507. m
+569. 507. l
+570.6568542494924259 507. 572. 505.656854249492369 572. 504. c
+572. 490. l
+572. 488.343145750507631 570.3431457505075741 487. 569. 487. c
+43. 487. l
+41.3431457505076168 487. 40. 488.656854249492369 40. 490. c
+40. 504. l
+40. 505.656854249492369 41.6568542494923832 507. 43. 507. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 493. Td
+([  ] 02. Inheritance, super\(\), & Polymorphism \(Dynamic Binding\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 479. Td
+(Subclasses inherit superclass methods via extends. super\(\) calls the superclass constructor and MUST be the first line of the) Tj
+T* (subclass constructor.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 453. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 453. Td
+(Compile-time check: Compiler verifies method exists on declared reference type) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 440. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 440. Td
+(Runtime execution: Java runs the overridden method on the actual instantiated object class \(Dynamic Binding\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 427. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 427. Td
+(Subclasses cannot access private superclass fields directly; must use getters/setters or super\(\)) Tj
+ET
+0.06 0.09 0.16 rg
+48. 414. m
+564. 414. l
+565.6568542494924259 414. 567. 412.656854249492369 567. 411. c
+567. 377. l
+567. 375.343145750507631 565.3431457505075741 374. 564. 374. c
+48. 374. l
+46.3431457505076168 374. 45. 375.656854249492369 45. 377. c
+45. 411. l
+45. 412.656854249492369 46.6568542494923832 414. 48. 414. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 402. Td
+(Animal a = new Dog\(\); // Polymorphic declaration) Tj
+T* (a.speak\(\);            // Runs Dog.speak\(\) at runtime) Tj
+T* (// a.fetch\(\);         // CE: Animal reference does not declare fetch\(\)) Tj
+ET
+0.95 0.96 0.98 rg
+43. 366. m
+569. 366. l
+570.6568542494924259 366. 572. 364.656854249492369 572. 363. c
+572. 349. l
+572. 347.343145750507631 570.3431457505075741 346. 569. 346. c
+43. 346. l
+41.3431457505076168 346. 40. 347.656854249492369 40. 349. c
+40. 363. l
+40. 364.656854249492369 41.6568542494923832 366. 43. 366. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 352. Td
+([  ] 03. References, Aliasing, & == vs. .equals\(\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 338. Td
+(Primitives store raw values. Objects store memory addresses. == on objects checks memory location identity, NOT character) Tj
+T* (content equality.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 312. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 312. Td
+(Always use .equals\(\) to compare String contents) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 299. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 299. Td
+(Aliasing: Dog d2 = d1; does NOT create a second dog; both variables point to the same object in heap memory) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 286. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 286. Td
+(Strings are immutable; methods like .toLowerCase\(\) return a NEW String and never modify the original) Tj
+ET
+0.06 0.09 0.16 rg
+48. 273. m
+564. 273. l
+565.6568542494924259 273. 567. 271.6568542494924259 567. 270. c
+567. 236. l
+567. 234.3431457505075741 565.3431457505075741 233. 564. 233. c
+48. 233. l
+46.3431457505076168 233. 45. 234.6568542494924259 45. 236. c
+45. 270. l
+45. 271.6568542494924259 46.6568542494923832 273. 48. 273. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 261. Td
+(String s1 = new String\("hi"\);) Tj
+T* (String s2 = new String\("hi"\);) Tj
+T* (System.out.println\(s1 == s2\);     // false \(different heap addresses\)) Tj
+T* (System.out.println\(s1.equals\(s2\)\); // true  \(same characters\)) Tj
+ET
+0.95 0.96 0.98 rg
+43. 225. m
+569. 225. l
+570.6568542494924259 225. 572. 223.6568542494924259 572. 222. c
+572. 208. l
+572. 206.3431457505075741 570.3431457505075741 205. 569. 205. c
+43. 205. l
+41.3431457505076168 205. 40. 206.6568542494924259 40. 208. c
+40. 222. l
+40. 223.6568542494924259 41.6568542494923832 225. 43. 225. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 211. Td
+([  ] 04. 1D Arrays vs. ArrayList<E> & The Backward Removal Loop) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 197. Td
+(Arrays have fixed capacity \(arr.length, field\). ArrayList has dynamic size \(list.size\(\), method\) and stores wrapper objects.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 182. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 182. Td
+(Arrays: arr[i] | ArrayList: list.get\(i\), list.set\(i, val\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 169. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 169. Td
+(Removing elements in a forward loop shifts indices, skipping consecutive matches) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 156. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 156. Td
+(Always traverse backwards \(for int i = list.size\(\) - 1; i >= 0; i--\) when removing elements) Tj
+ET
+0.06 0.09 0.16 rg
+48. 143. m
+564. 143. l
+565.6568542494924259 143. 567. 141.6568542494924259 567. 140. c
+567. 106. l
+567. 104.3431457505075741 565.3431457505075741 103. 564. 103. c
+48. 103. l
+46.3431457505076168 103. 45. 104.6568542494924259 45. 106. c
+45. 140. l
+45. 141.6568542494924259 46.6568542494923832 143. 48. 143. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 131. Td
+(// Safe removal loop:) Tj
+T* (for \(int i = list.size\(\) - 1; i >= 0; i--\) {) Tj
+T* (  if \(list.get\(i\).equals\("remove"\)\) list.remove\(i\);) Tj
+T* (}) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 612. 792.]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 7331
+>>
+stream
+0.200025 w
+0.86 G
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.471 g
+40. 767. Td
+(AP Computer Science A — Key Concepts Checklist) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.471 g
+392. 767. Td
+(github.com/Franky100-pig/CSA-CheatSheet) Tj
+ET
+0.86 G
+40. 762. m
+572. 762. l
+S
+0.95 0.96 0.98 rg
+43. 752. m
+569. 752. l
+570.6568542494924259 752. 572. 750.6568542494924259 572. 749. c
+572. 735. l
+572. 733.3431457505075741 570.3431457505075741 732. 569. 732. c
+43. 732. l
+41.3431457505076168 732. 40. 733.6568542494924259 40. 735. c
+40. 749. l
+40. 750.6568542494924259 41.6568542494923832 752. 43. 752. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 738. Td
+([  ] 05. 2D Arrays & Row-Major Traversal) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 724. Td
+(2D arrays are arrays of arrays stored in row-major order: grid[row][col]. Number of rows = grid.length, number of cols =) Tj
+T* (grid[0].length.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 698. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 698. Td
+(Outer loop indexes rows \(r = 0; r < grid.length; r++\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 685. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 685. Td
+(Inner loop indexes columns \(c = 0; c < grid[r].length; c++\)) Tj
+ET
+0.06 0.09 0.16 rg
+48. 672. m
+564. 672. l
+565.6568542494924259 672. 567. 670.6568542494924259 567. 669. c
+567. 635. l
+567. 633.3431457505075741 565.3431457505075741 632. 564. 632. c
+48. 632. l
+46.3431457505076168 632. 45. 633.6568542494924259 45. 635. c
+45. 669. l
+45. 670.6568542494924259 46.6568542494923832 672. 48. 672. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 660. Td
+(int[][] matrix = new int[2][3]; // 2 rows, 3 columns) Tj
+T* (for \(int r = 0; r < matrix.length; r++\)) Tj
+T* (  for \(int c = 0; c < matrix[r].length; c++\)) Tj
+T* (    matrix[r][c] = r * 10 + c;) Tj
+ET
+0.95 0.96 0.98 rg
+43. 624. m
+569. 624. l
+570.6568542494924259 624. 572. 622.6568542494924259 572. 621. c
+572. 607. l
+572. 605.3431457505075741 570.3431457505075741 604. 569. 604. c
+43. 604. l
+41.3431457505076168 604. 40. 605.6568542494924259 40. 607. c
+40. 621. l
+40. 622.6568542494924259 41.6568542494923832 624. 43. 624. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 610. Td
+([  ] 06. Recursion & Base Case Tracing) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 596. Td
+(A recursive method calls itself with simpler input until reaching a base case. Missing or unreachable base cases trigger) Tj
+T* (StackOverflowError.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 570. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 570. Td
+(Code before recursive call executes on the way DOWN the stack) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 557. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 557. Td
+(Code after recursive call executes on the way BACK UP the stack) Tj
+ET
+0.06 0.09 0.16 rg
+48. 544. m
+564. 544. l
+565.6568542494924259 544. 567. 542.6568542494924259 567. 541. c
+567. 507. l
+567. 505.343145750507631 565.3431457505075741 504. 564. 504. c
+48. 504. l
+46.3431457505076168 504. 45. 505.656854249492369 45. 507. c
+45. 541. l
+45. 542.6568542494924259 46.6568542494923832 544. 48. 544. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 532. Td
+(public static int mystery\(int n\) {) Tj
+T* (  if \(n <= 1\) return 1; // Base case) Tj
+T* (  return n + mystery\(n - 1\); // mystery\(4\) = 4+3+2+1 = 10) Tj
+T* (}) Tj
+ET
+0.95 0.96 0.98 rg
+43. 496. m
+569. 496. l
+570.6568542494924259 496. 572. 494.656854249492369 572. 493. c
+572. 479. l
+572. 477.343145750507631 570.3431457505075741 476. 569. 476. c
+43. 476. l
+41.3431457505076168 476. 40. 477.656854249492369 40. 479. c
+40. 493. l
+40. 494.656854249492369 41.6568542494923832 496. 43. 496. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 482. Td
+([  ] 07. Search & Sort Algorithms \(Big-O & Mechanics\)) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 468. Td
+(AP CSA requires understanding Sequential Search, Binary Search, Selection Sort, Insertion Sort, and Merge Sort.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 453. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 453. Td
+(Binary Search \(O\(log n\)\) REQUIRES SORTED DATA! Halves search space each step) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 440. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 440. Td
+(Selection Sort \(O\(n^2\)\): Repeatedly finds minimum and swaps to front \(minimum swaps\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 427. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 427. Td
+(Insertion Sort: O\(n\) best / O\(n^2\) worst \(fast if mostly sorted\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 414. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 414. Td
+(Merge Sort \(O\(n log n\)\): Recursive divide-and-conquer; merges sorted halves) Tj
+ET
+0.06 0.09 0.16 rg
+48. 401. m
+564. 401. l
+565.6568542494924259 401. 567. 399.656854249492369 567. 398. c
+567. 364. l
+567. 362.343145750507631 565.3431457505075741 361. 564. 361. c
+48. 361. l
+46.3431457505076168 361. 45. 362.656854249492369 45. 364. c
+45. 398. l
+45. 399.656854249492369 46.6568542494923832 401. 48. 401. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 389. Td
+(// Binary search middle formula: mid = \(low + high\) / 2;) Tj
+T* (// If target < arr[mid], search left: high = mid - 1;) Tj
+ET
+0.95 0.96 0.98 rg
+43. 353. m
+569. 353. l
+570.6568542494924259 353. 572. 351.656854249492369 572. 350. c
+572. 336. l
+572. 334.343145750507631 570.3431457505075741 333. 569. 333. c
+43. 333. l
+41.3431457505076168 333. 40. 334.656854249492369 40. 336. c
+40. 350. l
+40. 351.656854249492369 41.6568542494923832 353. 43. 353. c
+h
+f
+BT
+/F2 9.5 Tf
+10.9249999999999989 TL
+0.059 0.09 0.165 rg
+48. 339. Td
+([  ] 08. Boolean Logic, Short-Circuiting, & De Morgan's Laws) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+45. 325. Td
+(!\(A && B\) is equivalent to \(!A || !B\). !\(A || B\) is equivalent to \(!A && !B\). Short-circuit evaluation stops compound checks early.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 310. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 310. Td
+(Negation of < is >= \(must include equality!\)) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.792 0.541 0.016 rg
+48. 297. Td
+(·) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.2 0.255 0.333 rg
+58. 297. Td
+(Short-circuit: in \(s != null && s.length\(\) > 0\), if s is null, s.length\(\) is never called) Tj
+ET
+0.06 0.09 0.16 rg
+48. 284. m
+564. 284. l
+565.6568542494924259 284. 567. 282.656854249492369 567. 281. c
+567. 247. l
+567. 245.3431457505075741 565.3431457505075741 244. 564. 244. c
+48. 244. l
+46.3431457505076168 244. 45. 245.6568542494924259 45. 247. c
+45. 281. l
+45. 282.656854249492369 46.6568542494923832 284. 48. 284. c
+h
+f
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.886 0.91 0.941 rg
+52. 272. Td
+(// Safe null check with short-circuit &&:) Tj
+T* (if \(str != null && str.length\(\) > 0\) { ... }) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R ]
+/Count 2
+>>
+endobj
+7 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+8 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+9 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+10 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+11 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+13 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+14 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+15 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 7 0 R
+/F2 8 0 R
+/F3 9 0 R
+/F4 10 0 R
+/F5 11 0 R
+/F6 12 0 R
+/F7 13 0 R
+/F8 14 0 R
+/F9 15 0 R
+/F10 16 0 R
+/F11 17 0 R
+/F12 18 0 R
+/F13 19 0 R
+/F14 20 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+21 0 obj
+<<
+/Producer (jsPDF 4.2.1)
+/CreationDate (D:20261025022853-00'00')
+>>
+endobj
+22 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 23
+0000000000 65535 f 
+0000016872 00000 n 
+0000018697 00000 n 
+0000000015 00000 n 
+0000000120 00000 n 
+0000009384 00000 n 
+0000009489 00000 n 
+0000016935 00000 n 
+0000017060 00000 n 
+0000017190 00000 n 
+0000017323 00000 n 
+0000017461 00000 n 
+0000017585 00000 n 
+0000017714 00000 n 
+0000017846 00000 n 
+0000017982 00000 n 
+0000018110 00000 n 
+0000018237 00000 n 
+0000018366 00000 n 
+0000018499 00000 n 
+0000018601 00000 n 
+0000018947 00000 n 
+0000019033 00000 n 
+trailer
+<<
+/Size 23
+/Root 22 0 R
+/Info 21 0 R
+/ID [ <1574859302872EC968AFFE01FADDE533> <1574859302872EC968AFFE01FADDE533> ]
+>>
+startxref
+19137
+%%EOF
