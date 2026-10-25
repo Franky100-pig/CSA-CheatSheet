@@ -1,18 +1,20 @@
-# AP CSA Cheat Sheet ☕📘
+# AP CSA Cheat Sheet & Study Hub ☕📘
 
-Comprehensive reference and study guide for **AP Computer Science A** (Java), covering common compilation errors, syntax pitfalls, OOP guidelines, arrays/ArrayList mechanics, and test-taking tips.
+Comprehensive reference and study guide for **AP Computer Science A** (Java), covering core concepts, compilation errors, syntax rules, and exam strategies.
 
-## 📑 Contents
-- **[Common Compile Errors & Solutions](./common-compile-errors.md)**: Detailed breakdown of Java compilation errors commonly seen in AP CSA exams and labs with causes and code fixes.
-- **Java Basics & Type Rules**: Primitives vs Objects, casting, and scope.
-- **Object-Oriented Programming**: `class`, `super()`, inheritance, and polymorphism.
-- **Standard Library**: `String`, `Math`, `ArrayList<E>`, and wrapper classes.
+## 📑 Repository Structure
+- **[Key Concepts Checklist (Static vs Non-Static First)](./key-concepts-checklist.md)**: Master checklist covering Static vs Non-Static, Polymorphism, References, ArrayList mechanics, 2D Arrays, Recursion, and Algorithms.
+- **[Common Compile Errors (CE) Guide](./common-compile-errors.md)**: 11 most frequent Java compilation errors with clear definitions, causes, simple broken examples, and verified fixes.
 
 ## 🚀 Quick Exam Tips
-1. In Java, array lengths are a field (`arr.length`), String lengths are a method (`str.length()`), and ArrayList sizes are a method (`list.size()`).
-2. Integer division truncates towards zero (`5 / 2 == 2`). Cast to double before division if decimals are needed (`(double) 5 / 2 == 2.5`).
-3. Always check loop bounds: `for (int i = 0; i <= arr.length; i++)` throws `ArrayIndexOutOfBoundsException`. Use `i < arr.length`.
-4. Remember that `String` objects are immutable—methods like `toLowerCase()` or `substring()` return a **new** String and do not modify the original.
+1. **Static vs Instance**: `static` methods belong to the class, not an object. They cannot use `this` or access instance variables without creating an object instance.
+2. **Syntax Trio**:
+   - Arrays: `arr.length` (field, NO parentheses)
+   - Strings: `str.length()` (method, WITH parentheses)
+   - ArrayLists: `list.size()` (method, WITH parentheses)
+3. **Integer Division**: `5 / 2 == 2`. Cast to double first if decimal is required: `(double) 5 / 2 == 2.5`.
+4. **Strings are Immutable**: `str.toLowerCase()` produces a new string; it does NOT alter the original.
+5. **ArrayList Removals**: Always iterate backwards (`for (int i = list.size() - 1; i >= 0; i--)`) when removing elements in a loop to avoid index skip bugs.
 
 ---
 Created with GitDev Studio.
