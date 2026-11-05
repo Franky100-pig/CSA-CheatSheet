@@ -28,7 +28,7 @@ Complete annotated class skeleton, a six-step recipe for "write a class" questio
 ---
 
 ### 4. Writing Methods: Rules, Patterns & Traps
-Method anatomy, return rules, parameter passing (the highest-value trap), shadowing, overloading vs overriding, six method patterns you actually write, recursion notes, and a trap table:
+Method anatomy, return rules, parameter passing (the highest-value trap), shadowing, overloading vs overriding, six method patterns you actually write, recursion notes, a full section on calling library methods (`Math` return types, cast traps, random ranges, `String`/`ArrayList` signatures), and a trap table:
 - 📄 **PDF**: **[method-writing-notes.pdf](./method-writing-notes.pdf)** (Print-ready)
 - 📝 **Markdown**: **[method-writing-notes.md](./method-writing-notes.md)** (Raw / GitHub Markdown)
 
@@ -53,6 +53,8 @@ Every keyword the exam uses, grouped by job: access modifiers, `static`, `final`
 6. **Constructors Have No Return Type**: `public Student(String n)` — adding `void` breaks it (`invalid method declaration; return type required`).
 7. **Parameters Are Copies**: for an object the copy is the *reference*. Mutating the object is visible to the caller; reassigning the parameter is not.
 8. **`final` Does Not Freeze Contents**: `final int[] a` locks the reference, not the values — `a[0] = 5;` is still legal.
+9. **Cast the Whole Expression**: `(int) Math.random() * 10` is always `0` — the cast hits the fraction first. Write `(int) (Math.random() * 10)`.
+10. **`Math.pow` Returns a `double`**: `int x = Math.pow(2, 3);` does not compile, even though the answer looks like an integer.
 
 ---
 Created with GitDev Studio.

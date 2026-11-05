@@ -180,7 +180,82 @@ public static String reverse(String s) {
 
 ---
 
-## 8. Method Traps Checklist
+## 8. Calling Library Methods: Read the Signature First
+
+You never write these methods, so the only thing graded is whether your **call** matches the signature: right number of arguments, right types, and a return value you actually cast or store correctly.
+
+### The `Math` class: static, so no `new`
+
+| Call | Returns | What people get wrong |
+| :--- | :--- | :--- |
+| `Math.abs(int)` / `Math.abs(double)` | `int` / `double` | Returns the **same type** you passed; `Math.abs(-7)` is `7`, `Math.abs(-2.5)` is `2.5` |
+| `Math.pow(double, double)` | `double` | `Math.pow(2, 3)` is `8.0`, not `8` — assigning it to an `int` is a CE |
+| `Math.sqrt(double)` | `double` | `Math.sqrt(9)` is `3.0`; perfect squares do not come back as `int` |
+| `Math.random()` | `double` in `[0.0, 1.0)` | `1.0` is never returned; the cast has to wrap the whole product |
+| `Math.max(a, b)` / `Math.min(a, b)` *(extra)* | same type as the arguments | Mixing `int` and `double` promotes the result to `double`: `Math.max(3, 4.5)` is `4.5`, so it will not fit in an `int` |
+| `Math.round(double)` *(extra)* | `long` | Returns `long`, not `int` — needs a cast before it can go into an `int` |
+| `Math.PI` *(extra)* | `double` constant field | A field, no parentheses: `Math.PI`, never `Math.PI()` |
+
+The quick reference prints `abs`, `pow`, `random`, and `sqrt`. Rows marked *(extra)* are real Java but not on the printed sheet — only use them if the prompt does.
+
+```java
+int a = Math.abs(-7);            // 7      (int in, int out)
+double b = Math.sqrt(16);        // 4.0    (always a double)
+int c = (int) Math.pow(2, 10);   // 1024   cast required: double -> int
+int d = Math.pow(2, 10);         // CE: incompatible types, double cannot become int
+```
+
+### The three cast traps
+
+1. **Return type is `double`, so the assignment is a CE.** `int n = Math.pow(3, 2);` does not compile. Java will not quietly drop the fraction: insert `(int)`.
+2. **The cast binds to what is directly after it.** `(int) Math.random() * 10` casts the fraction (`0.0 -> 0`) and then multiplies: the answer is **always 0**. Wrap the product: `(int) (Math.random() * 10)` gives 0-9.
+3. **Casting truncates, it does not round.** `(int) 9.99` is `9`. If the prompt wants rounding, use `Math.round(...)` and cast its `long` result.
+
+### Random ranges worth memorising
+
+| Want | Write |
+| :--- | :--- |
+| A die: 1 to 6 | `(int) (Math.random() * 6) + 1` |
+| An index: 0 to n-1 | `(int) (Math.random() * n)` |
+| Any int from `min` to `max` inclusive | `(int) (Math.random() * (max - min + 1)) + min` |
+
+Because `Math.random()` never returns exactly `1.0`, the `+ 1` in the die formula is what makes 6 reachable. Drop it and you get 1-5.
+
+### Integer division happens inside the arguments
+
+Arguments are evaluated **before** the call, so the usual integer-division rule still applies:
+
+```java
+Math.pow(5 / 2, 2)   // 4.0,  not 6.25 — 5 / 2 is int division (2) first
+Math.sqrt(9 / 2)     // 2.0,  not 2.121 — 9 / 2 is 4
+Math.pow(5 / 2.0, 2) // 6.25 — one double operand fixes it
+```
+
+### Other library calls with the same discipline
+
+| Call | Returns | Trap |
+| :--- | :--- | :--- |
+| `s.length()` | `int` | Method, with `()`; arrays use `arr.length` with none |
+| `s.substring(a, b)` | `String` | `b` is **exclusive**; `b > s.length()` throws `StringIndexOutOfBoundsException` |
+| `s.indexOf(t)` | `int` | Returns `-1` when absent — check before feeding it to `substring` |
+| `s.charAt(i)` | `char` | `i` must be `0 .. length()-1`; `char` comparisons use `==`, `String` comparisons do not |
+| `s.equals(t)` / `s.compareTo(t)` | `boolean` / `int` | `compareTo` gives a **sign** (negative, zero, positive), not a distance |
+| `list.size()` | `int` | Method, with `()`; no `.length` on an `ArrayList` |
+| `list.get(i)` / `list.set(i, v)` | element type | `get` returns, `set` returns the **old** value |
+| `list.remove(i)` vs `list.remove(obj)` | element / `boolean` | With an `Integer` list, `remove(2)` removes the *index*; remove by object needs a cast |
+| `Integer.parseInt(s)` *(extra)* | `int` | Throws `NumberFormatException` on non-numeric text |
+| `s.trim().toLowerCase()` | `String` | Chaining runs left to right; each call returns a **new** String (Strings are immutable) |
+
+### Four habits for any library call
+
+- Read the parameter list first (count and types), then the return type. Most wrong answers are a type mismatch, not a logic error.
+- Static library methods are called on the **class**: `Math.pow(...)`, never `myMath.pow(...)` — you cannot `new Math()`.
+- Cast the whole expression, not the first token.
+- Check `-1`, `0`, or `null` before using a returned value as an index or a divisor.
+
+---
+
+## 9. Method Traps Checklist
 
 | Trap | Symptom | Fix |
 | :--- | :--- | :--- |
@@ -195,10 +270,14 @@ public static String reverse(String s) {
 | Instance method from static `main` | `CE: non-static method cannot be referenced` | `new Obj().method()` or make it static |
 | Same name, different return type | `CE: duplicate method` | Change the parameter list instead |
 | Method call on `null` | `NullPointerException` at runtime | Guard with `!= null` before the call |
+| `int n = Math.pow(2, 3);` | `CE: incompatible types` (double into int) | `(int) Math.pow(2, 3)` |
+| `(int) Math.random() * 10` | Always `0`: the cast hits the fraction first | `(int) (Math.random() * 10)` |
+| `int m = Math.max(3, 4.5);` | `CE`: the mixed argument promotes it to `double` | Keep both arguments `int`, or cast the result |
+| `Math.pow(5 / 2, 2)` | `4.0` instead of `6.25` | One double operand: `5 / 2.0` |
 
 ---
 
-## 9. Before You Submit
+## 10. Before You Submit
 
 - [ ] Signature matches the prompt character for character (name, parameter types, order, return type).
 - [ ] Non-`void`: a `return` on every path, including empty-input and no-match paths.
@@ -207,5 +286,6 @@ public static String reverse(String s) {
 - [ ] Objects mutated in place only when the prompt asks for in-place changes; otherwise return a new one.
 - [ ] Loop bounds use the right length: `arr.length` (array) vs `list.size()` (ArrayList).
 - [ ] `.equals()` for contents, `==` only for primitives and `null` checks.
-- [ ] Cast before dividing when a decimal result is expected.
+- [ ] Cast where a type changes: before dividing for a decimal result, and around `Math.pow`/`sqrt`/`random` before storing in an `int`.
+- [ ] Random range double-checked: `(int) (Math.random() * n) + min`, with the cast around the whole product.
 - [ ] Traced once by hand with a 0-element, 1-element, and normal input.
