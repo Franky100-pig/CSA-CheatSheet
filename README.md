@@ -28,7 +28,7 @@ Complete annotated class skeleton, a six-step recipe for "write a class" questio
 ---
 
 ### 4. Writing Methods: Rules, Patterns & Traps
-Method anatomy, return rules, parameter passing (the highest-value trap), shadowing, overloading vs overriding, six method patterns you actually write, recursion notes, a full section on calling library methods (`Math` return types, cast traps, random ranges, `String`/`ArrayList` signatures), and a trap table:
+Method anatomy, return rules, parameter passing (the highest-value trap), shadowing, overloading vs overriding, six method patterns you actually write, recursion notes, a section on calling library methods (`Math` return types, cast traps, random ranges, `String`/`ArrayList` signatures — expanded into its own sheet in topic 6), and a trap table:
 - 📄 **PDF**: **[method-writing-notes.pdf](./method-writing-notes.pdf)** (Print-ready)
 - 📝 **Markdown**: **[method-writing-notes.md](./method-writing-notes.md)** (Raw / GitHub Markdown)
 
@@ -38,6 +38,13 @@ Method anatomy, return rules, parameter passing (the highest-value trap), shadow
 Every keyword the exam uses, grouped by job: access modifiers, `static`, `final`, `void`, `this`/`super`, `new`, `null`, `extends`, `return`, control flow, the combinations you type constantly, and a keyword-level trap table:
 - 📄 **PDF**: **[keyword-reference.pdf](./keyword-reference.pdf)** (Print-ready)
 - 📝 **Markdown**: **[keyword-reference.md](./keyword-reference.md)** (Raw / GitHub Markdown)
+
+---
+
+### 6. The Math Class: Methods, Casts & Ranges
+Standalone reference for `Math`: the four quick-reference methods with exact signatures, `abs` overloads, `pow`/`sqrt` returning `double`, `NaN` and overflow edge cases, the random range formulas (and the three ways they break), a four-way rounding comparison, exam patterns, and a trap table:
+- 📄 **PDF**: **[math-class.pdf](./math-class.pdf)** (Print-ready)
+- 📝 **Markdown**: **[math-class.md](./math-class.md)** (Raw / GitHub Markdown)
 
 ---
 
